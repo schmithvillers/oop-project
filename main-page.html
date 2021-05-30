@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* -----------------------------------css-----------------------------------*/
+    .navbar{
+      display: block;
+      position: absolute;
+      width: 60%;
+      height: 50px;
+      padding: 20px;
+      margin: auto;
+      font-size: large;
+      color: white;
+      /*background-color: black;*/
+      left: 20%;
+      top: 5%;
+    }
+    a:link, a:visited, a:hover, a:active{
+      text-decoration: none;
+      color: white;
+    }
+    body{
+      background-image: url(./12344.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .bgimg{
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .func{
+      font-family: 'Oswald', sans-serif;
+      position: absolute;
+      height: 50%;
+      visibility: visible;
+      width: 60%;
+      text-align: center;
+      bottom: 0px;
+      font-size: 45px;
+      color: white;
+      left: 20%;
+    }
+    button{
+      background-color: rgb(255, 123, 0);
+      border: 0px solid rgb(255, 145, 0);
+      border-radius: 0px;
+      width: 27%;
+      height: 13%;
+      font-size: large;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 1px;
+      min-width: 200px;
+    }
+    button:hover{
+      background-color: #efefef;
+      color: black;
+    }
+    .line{
+      border-color: rgb(255, 123, 0);
+      width: 50px;  
+    }
+    .submit{
+      border: 0px solid black;
+      height: 50px;
+      font-size: large;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .submit:hover{
+      background-color: rgb(255, 123, 0);
+      color: white;
+    }
+    .opcard{
+      background-color: white;
+      position: absolute;
+      visibility: hidden;
+      border-radius: 20px;
+      height: 17%;
+      width: 60%;
+      top: 20%;
+      left: 20%;
+      font-size: larger;
+      font-family: 'Oswald', sans-serif;
+    }
+    input{
+      border:0px solid black;
+      border-bottom: 1px solid black;
+      width: 95%;
+      font-size: large;      
+      font-family: 'Oswald', sans-serif;
+    }
+    table{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      font-size: large;
+      border-radius: 20px;
+      background-color: white;
+    }
+    /*td, tr {
+      border: 1px solid black;
+    }*/
+    .deposit{
+      visibility: hidden;
+      z-index: 0.1;
+    }
+    .withdrawl{
+      visibility: hidden;
+      z-index: 0.2;
+      top: -50px;
+    }
+    .transfer{
+      visibility: hidden;
+      z-index: 0.3;
+    }
+    .cngaddr{
+      visibility: hidden;
+      z-index: 0.4;
+    }
+    .prtst{
+      visibility: hidden;
+      z-index: 0.5;
+    }
+    .clsacc{
+      visibility: hidden;
+      z-index: 0.6;
+      text-align: center;
+    }
+    .clsbtn{
+      height: 50px; 
+      border-radius: 0px; 
+      background-color: #efefef; 
+      color: black;
+    }
+    .clsbtn:hover{
+      background-color: rgb(255, 123, 0);
+      color: white;
+    }
+    .pst{
+      height: 95%;
+      width: 95%;
+      position: relative;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 0px;
+    }
+
+    /* -----------------------------------css-----------------------------------*/
+  </style>
+   
+  <meta charset="ISO-8859-1">
+  <title>Bank Web Application</title>
+</head>
+<body>
+  <div class="navbar">
+    <div style="text-align: right;">
+      <a style= "margin: 10px;" href="./main-page.html">Home</a>
+      <a style= "margin: 10px;" href="./signin.html">Admin Login</a>
+      <a style= "margin: 10px;" href="./signup.html">Sign Up</a>
+      <a style= "margin: 10px;" href="./signin.html">Sign In</a>
+      <a style= "margin: 10px;" href="./main-page.html">Sign Out</a>
+    </div>
+  </div>  
+
+  <div class="opcard" id="opcard">
+    <!--------------------------------------------------DEPOSIT-------------------------------------------------------------------->
+    <div class="deposit" id="deposit">
+      <table>   
+        <tr>
+          <td style="font-size: 30px; width: 20%; text-align: center;">MONEY DEPOSIT</td>
+          <td style="font-size: 25px; width: 15%;">Enter Amount</td>
+          <td style="width: 40%;"><input style="height: 40%;" type="number" id="amt" name="amt"></td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+        </tr>
+      </table>
+    </div>
+    <!--------------------------------------------------WITHDRAWL-------------------------------------------------------------------->
+    <div class="withdrawl" id="withdrawl">
+      <table>   
+        <tr>
+          <td style="font-size: 30px; width: 20%; text-align: center;">MONEY WITHDRAWL</td>
+          <td style="font-size: 25px; width: 15%;">Enter Amount</td>
+          <td style="width: 40%;"><input style="height: 40%;" type="number" id="amt" name="amt"></td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+        </tr>
+      </table>
+    </div>
+    <!--------------------------------------------------MONEY TRANSFER-------------------------------------------------------------------->
+    <div class="transfer" id="transfer">
+      <table>   
+        <tr>
+          <td style="font-size: 30px; width: 20%; text-align: center;">MONEY TRANSFER</td>
+          <td style="font-size: 25px; width: 15%;">Enter Amount <br>  Enter Acc No</td>
+          <td style="width: 40%;">
+            <input type="number" style="height: 25%;" id="amt" name="amt">
+            <input type="number" style="height: 25%;" id="acc" name="acc">
+          </td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+        </tr>
+      </table>
+    </div>
+    <!--------------------------------------------------CHANGE ADDRESS-------------------------------------------------------------------->
+    <div class="cngaddr" id="cngaddr">
+      <table>   
+        <tr>
+          <td style="font-size: 30px; width: 15%; text-align: center;">CHANGE ADDRESS</td>
+          <td style="font-size: 25px; width: 60%; padding-left: 10px;">
+            Line 1 <input type="text" style="width: 80%;" id="line1" name="line1"><br>
+            Line 2 <input type="text" style="width: 80%;" id="line2" name="line2"><br>
+            City  <input type="text" style="width: 20%;" id="city" name="city">
+            State  <input type="text" style="width: 20%;" id="state" name="state">
+            Pincode  <input type="text" style="width: 20%;" maxlength="6" size="6" id="pin" name="pin">
+          </td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+        </tr>
+      </table>
+    </div>
+    <!--------------------------------------------------PRINT STATEMENT-------------------------------------------------------------------->
+    <div class="prtst" id="prtst">
+      <table>   
+        <tr>
+          <td style="font-size: 30px; width: 20%; text-align: center;">PRINT STATEMENT</td>
+          <td>
+            <table class="pst" style="border: 1px solid black;">
+              <tr>
+                <td>S.No</td>
+                <td>Operation</td>
+                <td>Amount</td>
+                <td>Account Number</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Withdrawl</td>
+                <td>5345634645</td>
+                <td>5674567456745</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>deposit</td>
+                <td>3452345623456</td>
+                <td>3452345234523</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>deposit</td>
+                <td>3452345623456</td>
+                <td>3452345234523</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>deposit</td>
+                <td>3452345623456</td>
+                <td>3452345234523</td>
+              </tr>
+            </table> 
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--------------------------------------------------CLOSE ACCOUNT-------------------------------------------------------------------->
+    <div class="clsacc" id="clsacc">
+      <p style="font-size: 25px;">Are you sure you want to close your account?</p>
+      <button class="clsbtn">Yes, I'm sure</button>
+      <button class="clsbtn">No, I'm not</button>
+    </div>
+  </div>
+
+  <div class="func">
+    <p style="font-size: 30px; font-family:'Oswald', sans-serif; letter-spacing: 1px;"> CURRENT BALANCE: Rs. </p>
+    <p style="margin-top: -20px;">CHOOSE FROM THE FOLLOWING FUNCTIONS</p>
+    <hr class="line">
+    <button onclick="dep()">Deposit</button>
+    <button onclick="wit()">Withdrawl</button>
+    <button onclick="tra()">Money Transfer</button>
+    <button onclick="prt()">Print Statement</button>
+    <button onclick="cng()">Change Address</button>
+    <button onclick="cls()">Close Account</button>
+  </div>
+  
+  <script>
+    function dep() {
+      document.getElementById("deposit").style.visibility = "visible";
+      document.getElementById("opcard").style.visibility = "visible";
+      document.getElementById("opcard").style.height = "15%";
+      document.getElementById("withdrawl").style.visibility = "hidden";
+      document.getElementById("transfer").style.visibility = "hidden";
+      document.getElementById("cngaddr").style.visibility = "hidden";
+      document.getElementById("prtst").style.visibility = "hidden";
+      document.getElementById("clsacc").style.visibility = "hidden";
+    }
+    function wit() {
+      document.getElementById("withdrawl").style.visibility = "visible";
+      document.getElementById("opcard").style.visibility = "visible";
+      document.getElementById("opcard").style.height = "15%";
+      document.getElementById("deposit").style.visibility = "hidden";
+      document.getElementById("transfer").style.visibility = "hidden";
+      document.getElementById("cngaddr").style.visibility = "hidden";
+      document.getElementById("prtst").style.visibility = "hidden";
+      document.getElementById("clsacc").style.visibility = "hidden";
+    }
+    function tra() {
+      document.getElementById("transfer").style.visibility = "visible";
+      document.getElementById("opcard").style.visibility = "visible";
+      document.getElementById("opcard").style.height = "15%";
+      document.getElementById("withdrawl").style.visibility = "hidden";
+      document.getElementById("deposit").style.visibility = "hidden";
+      document.getElementById("cngaddr").style.visibility = "hidden";
+      document.getElementById("prtst").style.visibility = "hidden";
+      document.getElementById("clsacc").style.visibility = "hidden";
+    }
+    function prt() {
+      document.getElementById("prtst").style.visibility = "visible";
+      document.getElementById("opcard").style.visibility = "visible";
+      document.getElementById("opcard").style.height = "30%";
+      document.getElementById("withdrawl").style.visibility = "hidden";
+      document.getElementById("transfer").style.visibility = "hidden";
+      document.getElementById("deposit").style.visibility = "hidden";
+      document.getElementById("cngaddr").style.visibility = "hidden";
+      document.getElementById("clsacc").style.visibility = "hidden";
+    }
+    function cng() {
+      document.getElementById("cngaddr").style.visibility = "visible";
+      document.getElementById("opcard").style.visibility = "visible";
+      document.getElementById("opcard").style.height = "15%";
+      document.getElementById("withdrawl").style.visibility = "hidden";
+      document.getElementById("transfer").style.visibility = "hidden";
+      document.getElementById("prtst").style.visibility = "hidden";
+      document.getElementById("deposit").style.visibility = "hidden";
+      document.getElementById("clsacc").style.visibility = "hidden";
+    }
+    function cls() {
+      document.getElementById("clsacc").style.visibility = "visible";
+      document.getElementById("opcard").style.visibility = "visible";
+      document.getElementById("opcard").style.height = "15%";
+      document.getElementById("withdrawl").style.visibility = "hidden";
+      document.getElementById("transfer").style.visibility = "hidden";
+      document.getElementById("cngaddr").style.visibility = "hidden";
+      document.getElementById("prtst").style.visibility = "hidden";
+      document.getElementById("deposit").style.visibility = "hidden";
+    }
+    </script>
+
+</body>
+</html>

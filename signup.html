@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign Up</title>
+     <style>
+          .navbar{
+               display: block;
+               position: absolute;
+               width: 60%;
+               height: 50px;
+               padding: 20px;
+               margin: auto;
+               font-size: large;
+               color: white;
+               left: 20%;
+               top: 5%;
+               transform: none;
+          }
+          a:link, a:visited, a:hover, a:active{
+               text-decoration: none;
+               color: white;
+          }
+          button{
+               background-color: rgb(255, 123, 0);
+               border: 0px solid rgb(255, 145, 0);
+               border-radius: 0px;
+               width: 27%;
+               height: 13%;
+               font-size: large;
+               color: white;
+               text-transform: uppercase;
+               font-family: 'Oswald', sans-serif;
+               letter-spacing: 1px;
+               min-width: 200px;
+          }
+          input[type=text], input[type=password] {
+               width: 37%;
+               padding: 10px;
+               margin: 5px 0 22px 0;
+               display: inline-block;
+               border: none;
+               background: #f1f1f1;
+               height: 3%;
+               font-size: large;
+          }
+          body{
+               background-image: url(./12344.jpg);
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+               background-size: cover;
+               font-family:Arial, Helvetica, sans-serif;
+          }
+          input[type=text]:focus, input[type=password]:focus {
+               background-color: #ddd;
+               outline: none;
+          }
+
+
+          .subutton {
+               background-color: rgb(255, 123, 0);
+               padding: 14px 20px;
+               margin: 8px 0;
+               border: none;
+               cursor: pointer;
+               width: 100%;
+               opacity: 0.9;
+               color: white;
+               letter-spacing: 2px;
+          }
+          .cancelbtn {
+               padding: 14px 20px;
+               background-color: #efefef;
+               color: black;
+          }
+
+          .cancelbtn, .signupbtn {
+               float: left;
+               width: 50%;
+               height: 3%;
+          }
+
+          .signup {
+               position: absolute;
+               padding: 16px;
+               height: 70%;
+               width: 40%;
+               background-color: white;
+               top: 15%;
+               left: 30%;
+               visibility: visible;
+               font-family: 'Oswald';
+               font-size: larger;
+          }
+          /* Clear floats */
+          .clearfix::after {
+               content: "";
+               clear: both;
+               display: table;
+          }
+
+          /* Change styles for cancel button and signup button on extra small screens */
+          @media screen and (max-width: 300px) {
+               .cancelbtn, .signupbtn {
+               width: 100%;
+               }
+          }
+     </style>
+</head>
+<body>
+     <div class="navbar">
+          <div style="text-align: right;">
+               <a style= "margin: 10px;" href="./main-page.html">Home</a>
+               <a style= "margin: 10px;" href="./signin.html">Admin Login</a>
+               <a style= "margin: 10px;" href="./signup.html">Sign Up</a>
+               <a style= "margin: 10px;" href="./signin.html">Sign In</a>
+               <a style= "margin: 10px;" href="./main-page.html">Sign Out</a>
+          </div>
+        </div>   
+     <!--------------------------------------------------SIGN UP-------------------------------------------------------------------->
+     <form action="/action_page.php" style="border:1px solid #ccc; background-color: white;" id="signup">
+          <div class="signup" id="signup">
+          <h1 style="margin-top: -10px;">SIGN UP</h1>
+          <p>Please fill in this form to create an account.</p>
+
+          <label for="name">Name</label>
+          <input type="text" placeholder="First Name" name="fname" required>
+          <input type="text" placeholder="Last Name" name="lname" required><br>
+
+          <label for="address">Address</label>
+          <input type="text" placeholder="Line 1" name="line1" required>
+          <input type="text" placeholder="Line 2" name="line2" required>
+          <input type="text" style="width: 25%; margin-top: -40%;" placeholder="City" name="city" required>
+          <input type="text" style="width: 25%;" placeholder="State" name="state" required>
+          <input type="text" style="width: 25%;" placeholder="Pincode" name="pin" required><br>
+
+          <label for="psw">Set Password</label>
+          <input type="password" placeholder="Password" name="psw" required><br>
+
+          <label for="acctype"></label>
+          <input type="radio" name="acctype">Current Account
+          <input type="radio" name="acctype">Saving Account
+
+          <div class="clearfix">
+          <button type="button" class="cancelbtn subutton">Cancel</button>
+          <button type="submit" class="signupbtn subutton">Sign Up</button>
+          </div>
+          </div>
+     </form>
+</body>
+</html>
