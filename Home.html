@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
   <style>
     /* -----------------------------------css-----------------------------------*/
@@ -14,7 +15,6 @@
       margin: auto;
       font-size: large;
       color: white;
-      /*background-color: black;*/
       left: 20%;
       top: 5%;
     }
@@ -157,45 +157,49 @@
     /* -----------------------------------css-----------------------------------*/
   </style>
    
-  <meta charset="ISO-8859-1">
-  <title>Bank Web Application</title>
+<meta charset="ISO-8859-1">
+<title>Bank Web Application</title>
 </head>
 <body>
-  <div class="navbar">
+<div class="navbar">
+<form action="MainPage" method="post">        
     <div style="text-align: right;">
-      <a style= "margin: 10px;" href="./main-page.html">Home</a>
-      <a style= "margin: 10px;" href="./signin.html">Admin Login</a>
-      <a style= "margin: 10px;" href="./signup.html">Sign Up</a>
-      <a style= "margin: 10px;" href="./signin.html">Sign In</a>
-      <a style= "margin: 10px;" href="./main-page.html">Sign Out</a>
+    <a style= "margin: 10px;" href="./signin.html"  >Sign Out</a>   
+      <p style="font-size: 20px; color: white" >Delete transaction history <input style="width: 20%; height: 30px;" type="submit" value="Delete" name="delete"></p>    
     </div>
+        </form>
   </div>  
 
   <div class="opcard" id="opcard">
     <!--------------------------------------------------DEPOSIT-------------------------------------------------------------------->
     <div class="deposit" id="deposit">
+      <form action="MainPage" method="post">
       <table>   
         <tr>
           <td style="font-size: 30px; width: 20%; text-align: center;">MONEY DEPOSIT</td>
           <td style="font-size: 25px; width: 15%;">Enter Amount</td>
           <td style="width: 40%;"><input style="height: 40%;" type="number" id="amt" name="amt"></td>
-          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit" name="Deposit"></td>
         </tr>
       </table>
+      </form>
     </div>
     <!--------------------------------------------------WITHDRAWL-------------------------------------------------------------------->
     <div class="withdrawl" id="withdrawl">
+      <form action="MainPage" method="post">
       <table>   
         <tr>
           <td style="font-size: 30px; width: 20%; text-align: center;">MONEY WITHDRAWL</td>
           <td style="font-size: 25px; width: 15%;">Enter Amount</td>
           <td style="width: 40%;"><input style="height: 40%;" type="number" id="amt" name="amt"></td>
-          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit" name="Withdrawl"></td>
         </tr>
       </table>
+      </form>
     </div>
     <!--------------------------------------------------MONEY TRANSFER-------------------------------------------------------------------->
     <div class="transfer" id="transfer">
+      <form action="MainPage" method="post">
       <table>   
         <tr>
           <td style="font-size: 30px; width: 20%; text-align: center;">MONEY TRANSFER</td>
@@ -204,79 +208,52 @@
             <input type="number" style="height: 25%;" id="amt" name="amt">
             <input type="number" style="height: 25%;" id="acc" name="acc">
           </td>
-          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit" name="Transfer"></td>
         </tr>
       </table>
+      </form>
     </div>
     <!--------------------------------------------------CHANGE ADDRESS-------------------------------------------------------------------->
     <div class="cngaddr" id="cngaddr">
+    <form action="MainPage" method="post">
       <table>   
         <tr>
           <td style="font-size: 30px; width: 15%; text-align: center;">CHANGE ADDRESS</td>
           <td style="font-size: 25px; width: 60%; padding-left: 10px;">
+            Customer_ID<input type="text" style="width: 20%;" id="cid" name="ID"><br>
             Line 1 <input type="text" style="width: 80%;" id="line1" name="line1"><br>
             Line 2 <input type="text" style="width: 80%;" id="line2" name="line2"><br>
             City  <input type="text" style="width: 20%;" id="city" name="city">
             State  <input type="text" style="width: 20%;" id="state" name="state">
-            Pincode  <input type="text" style="width: 20%;" maxlength="6" size="6" id="pin" name="pin">
+            Pincode  <input type="text" style="width: 20%;" maxlength="6" id="pin" name="pin">
           </td>
-          <td><input class="submit" style="width: 100%; height: 40px;" type="submit"></td>
+          <td><input class="submit" style="width: 100%; height: 40px;" type="submit" name="Address"></td>
         </tr>
       </table>
+      </form>
     </div>
     <!--------------------------------------------------PRINT STATEMENT-------------------------------------------------------------------->
+    
     <div class="prtst" id="prtst">
-      <table>   
-        <tr>
-          <td style="font-size: 30px; width: 20%; text-align: center;">PRINT STATEMENT</td>
-          <td>
-            <table class="pst" style="border: 1px solid black;">
-              <tr>
-                <td>S.No</td>
-                <td>Operation</td>
-                <td>Amount</td>
-                <td>Account Number</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Withdrawl</td>
-                <td>5345634645</td>
-                <td>5674567456745</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>deposit</td>
-                <td>3452345623456</td>
-                <td>3452345234523</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>deposit</td>
-                <td>3452345623456</td>
-                <td>3452345234523</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>deposit</td>
-                <td>3452345623456</td>
-                <td>3452345234523</td>
-              </tr>
-            </table> 
-          </td>
-        </tr>
-      </table>
+        <form action="MainPage" method="get">
+          <input type="submit" class="submit" name="print">
+        </form>
     </div>
     <!--------------------------------------------------CLOSE ACCOUNT-------------------------------------------------------------------->
-    <div class="clsacc" id="clsacc">
-      <p style="font-size: 25px;">Are you sure you want to close your account?</p>
-      <button class="clsbtn">Yes, I'm sure</button>
-      <button class="clsbtn">No, I'm not</button>
+    <div class="clsacc" id="clsacc" >
+    
+      <p style="font-size: 30px; color: white" >Are you sure you want to close your account?</p>
+           <form action="MainPage" method="post">
+       <button class="clsbtn" name="close" type="submit" style="top:-100px">Yes, I'm sure</button>
+      <button class="clsbtn" type="submit" style="top:-100px">No, I'm not</button>
+   </form>
     </div>
+  
   </div>
 
   <div class="func">
-    <p style="font-size: 30px; font-family:'Oswald', sans-serif; letter-spacing: 1px;"> CURRENT BALANCE: Rs. </p>
-    <p style="margin-top: -20px;">CHOOSE FROM THE FOLLOWING FUNCTIONS</p>
+    <!--<p style="font-size: 30px; font-family:'Oswald', sans-serif; letter-spacing: 1px;"> CURRENT BALANCE: Rs. </p>-->
+    <p style="margin-top: 50px;">CHOOSE FROM THE FOLLOWING FUNCTIONS</p>
     <hr class="line">
     <button onclick="dep()">Deposit</button>
     <button onclick="wit()">Withdrawl</button>
@@ -301,7 +278,7 @@
       document.getElementById("withdrawl").style.visibility = "visible";
       document.getElementById("opcard").style.visibility = "visible";
       document.getElementById("opcard").style.height = "15%";
-      document.getElementById("deposit").style.visibility = "hidden";
+       document.getElementById("deposit").style.visibility = "hidden";
       document.getElementById("transfer").style.visibility = "hidden";
       document.getElementById("cngaddr").style.visibility = "hidden";
       document.getElementById("prtst").style.visibility = "hidden";
@@ -319,7 +296,6 @@
     }
     function prt() {
       document.getElementById("prtst").style.visibility = "visible";
-      document.getElementById("opcard").style.visibility = "visible";
       document.getElementById("opcard").style.height = "30%";
       document.getElementById("withdrawl").style.visibility = "hidden";
       document.getElementById("transfer").style.visibility = "hidden";
@@ -339,7 +315,6 @@
     }
     function cls() {
       document.getElementById("clsacc").style.visibility = "visible";
-      document.getElementById("opcard").style.visibility = "visible";
       document.getElementById("opcard").style.height = "15%";
       document.getElementById("withdrawl").style.visibility = "hidden";
       document.getElementById("transfer").style.visibility = "hidden";
@@ -348,6 +323,5 @@
       document.getElementById("deposit").style.visibility = "hidden";
     }
     </script>
-
 </body>
 </html>
